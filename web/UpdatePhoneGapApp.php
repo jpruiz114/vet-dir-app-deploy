@@ -4,6 +4,7 @@ $phonegapPassword = getenv("phonegap_password");
 $phonegapAppId = getenv("phonegap_app_id");
 
 $curlCommand = 'curl -u "$phonegapUsername:$phonegapPassword" -X PUT -d \'data={"pull":"true"}\' https://build.phonegap.com/api/v1/apps/$phonegapAppId';
+echo("curlCommand" . " = " . $curlCommand);
 
 $result = exec($curlCommand);
 
